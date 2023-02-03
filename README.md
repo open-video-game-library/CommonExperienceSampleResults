@@ -1,57 +1,15 @@
-# base
+# 共通体験サンプル 研究結果一覧
 
-## Project setup
+Experimantal results of Common Experience Sample
 
-```
-# yarn
-yarn
+Access to https://open-video-game-library.github.io/CommonExperienceSample_results/
 
-# npm
-npm install
+<img width="1260" alt="Experimantal results of Common Experience Sample" src="https://user-images.githubusercontent.com/52689532/216533540-69085258-2064-412b-9c33-898a634e4bb2.png">
 
-# pnpm
-pnpm install
-```
+[共通体験サンプル](https://github.com/open-video-game-library/CommonExperienceSample)を利用した先行研究のアンケート結果が投稿・閲覧できます。
 
-### Compiles and hot-reloads for development
+It is available to upload and browse the questionnaire results of previous researches using the [Common Experience Sample](https://github.com/open-video-game-library/CommonExperienceSample).
 
-```
-# yarn
-yarn dev
+アンケート結果を共有することで、触覚ディスプレイの違いによる体験評価の比較が可能になります。
 
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-```
-
-### Compiles and minifies for production
-
-```
-# yarn
-yarn build
-
-# npm
-npm run build
-
-# pnpm
-pnpm build
-```
-
-### Lints and fixes files
-
-```
-# yarn
-yarn lint
-
-# npm
-npm run lint
-
-# pnpm
-pnpm lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).
+By sharing the questionnaire results, it is possible to compare the experience evaluation of different haptic displays.
