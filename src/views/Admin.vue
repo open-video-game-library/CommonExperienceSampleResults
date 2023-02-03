@@ -30,7 +30,7 @@ const deleted = (id) => {
 setResultsListener(added, modified, deleted)
 
 const clickDeleteBtn = (id, filename) => {
-    if(!confirm(`${id}のデータを削除しますか？\n*この操作は取り消せません*`)) return
+    if(!confirm(`ID: ${id} のデータを削除しますか？\n*この操作は取り消せません*`)) return
     deleteData(id, filename)
 }
 </script>
