@@ -1,6 +1,6 @@
 # 共通体験サンプル 研究結果一覧
 
-Experimantal results of Common Experience Sample
+Questionnaire results of Common Experience Sample
 
 Access to https://open-video-game-library.github.io/CommonExperienceSample_results/
 
