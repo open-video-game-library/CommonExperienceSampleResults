@@ -56,8 +56,8 @@ const clickDeleteBtn = (id, filename) => {
         <v-row v-if="!Object.keys(loginUser).length" justify="center" class="my-4 py-4">
             <v-btn @click="loginWithGoogle(getUser)">Googleでログイン</v-btn>
         </v-row>
-        <!-- <v-row v-else-if="isAdmin" justify="center" class="my-4 py-4"> -->
-        <v-row justify="center" class="my-4 py-4">
+        <v-row v-else-if="isAdmin" justify="center" class="my-4 py-4">
+        <!-- <v-row justify="center" class="my-4 py-4"> -->
             <v-table>
                 <thead>
                     <tr>

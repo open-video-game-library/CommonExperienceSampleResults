@@ -45,6 +45,9 @@ setResultsListener(added, modified, deleted)
       </v-container>
     </div>
 
+    <v-btn to="/admin" color="grey" variant="text" icon="mdi-cog"
+      style="position: absolute; top: 8px; right: 8px;"></v-btn>
+
     <v-container>
       <div class="my-4 py-4">
         <h2>リザルト</h2>
