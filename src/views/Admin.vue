@@ -54,10 +54,9 @@ const clickDeleteBtn = (id, filename) => {
             </span>
         </p>
         <v-row v-if="!Object.keys(loginUser).length" justify="center" class="my-4 py-4">
-            <v-btn @click="loginWithGoogle(getUser)">Googleでログイン</v-btn>
+            <v-btn @click="loginWithGoogle(getUser)" prepend-icon="mdi-google" color="primary" elevation="2">Googleでログイン</v-btn>
         </v-row>
         <v-row v-else-if="isAdmin" justify="center" class="my-4 py-4">
-        <!-- <v-row justify="center" class="my-4 py-4"> -->
             <v-table>
                 <thead>
                     <tr>
@@ -90,6 +89,10 @@ const clickDeleteBtn = (id, filename) => {
                     </tr>
                 </tbody>
             </v-table>
+        </v-row>
+
+        <v-row justify="center" class="my-4 py-4">
+            <v-btn to="/" elevation="2" color="primary">トップへ戻る</v-btn>
         </v-row>
     </v-container>
 </template>
