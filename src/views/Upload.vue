@@ -145,6 +145,10 @@ const completed = (params) => {
                         :loading="loading"
                     >アップロード</v-btn>
                 </v-row>
+
+                <v-row justify="center" class="my-8 py-8">
+                    <v-btn to="/" elevation="2" color="primary">トップへ戻る</v-btn>
+                </v-row>
         </v-form>
     </v-container>
 </template>
