@@ -24,3 +24,5 @@ pnpm-debug.log*
 #firebase
 .firebaseConfig.js
 .admins.js
+firestore.rules
+storage.rules

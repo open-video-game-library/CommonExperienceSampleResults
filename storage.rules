@@ -2,8 +2,15 @@ rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
     match /{allPaths=**} {
-      allow read, write: if 
-          request.time < timestamp.date(2023, 2, 28);;
+      allow read, create: if true;
+      allow update: if false;
+      allow delete: if
+        request.auth != null &&
+        (
+          request.auth.uid == 'J3J3uCtY0fbr3FiISJ6ThBxHTA72' ||
+          request.auth.uid == 'nGH9afU6UzUBJjrU7149mTogl9N2' ||
+          request.auth.uid == '8CB48fPTDeUQLS8aIOptuDtn06O2'
+        );
     }
   }
 }
