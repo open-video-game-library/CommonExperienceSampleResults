@@ -1,9 +1,9 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '../views/Home.vue'
-import Upload from '../views/Upload.vue'
-import Complete from '../views/Complete.vue'
+// import Home from '../views/Home.vue'
+// import Upload from '../views/Upload.vue'
+// import Complete from '../views/Complete.vue'
 
 const routes = [
   {
@@ -13,17 +13,22 @@ const routes = [
       {
         path: '',
         name: 'Home',
-        component: () => Home
+        component: () => import('@/views/Home.vue'),
       },
       {
         path: '/upload',
         name: 'Upload',
-        component: () => Upload
+        component: () => import('@/views/Upload.vue'),
       },
       {
         path: '/upload/complete',
         name: 'Complete',
-        component: () => Complete
+        component: () => import('@/views/Complete.vue'),
+      },
+      {
+        path: '/admin',
+        name: 'Admin',
+        component: () => import('@/views/Admin.vue'),
       },
     ],
   },

@@ -23,3 +23,4 @@ pnpm-debug.log*
 
 #firebase
 .firebaseConfig.js
+.admins.js

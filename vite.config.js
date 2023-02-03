@@ -8,7 +8,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/CommonExperienceSample_results/' : './',
+  base: '/CommonExperienceSample_results/',
   plugins: [
     vue({ 
       template: { transformAssetUrls }
@@ -21,9 +21,6 @@ export default defineConfig({
       },
     }),
   ],
-  build: {
-    outDir: 'docs',
-  },
   define: { 'process.env': {} },
   resolve: {
     alias: {

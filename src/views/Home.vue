@@ -67,8 +67,11 @@ setResultsListener(added, modified, deleted)
             </td>
             <td>{{ item.hmd }}</td>
             <td>
-              <a :href="item.downloadURL">
-                {{ item.filename }}
+              <a :href="item.downloadURL[0]" type="text/csv">
+                {{ item.filename[0] }}
+              </a><br />
+              <a v-if="item.filename[1]" :href="item.downloadURL[1]" type="text/csv">
+                {{ item.filename[1] }}
               </a>
             </td>
             <td>{{ item.note }}</td>

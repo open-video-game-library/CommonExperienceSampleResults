@@ -3,6 +3,8 @@ import { ref } from "vue"
 import {
     addData,
 } from '../firebase/api'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 const samples = [
     "マテリアルボード",
@@ -27,10 +29,11 @@ const deviceRules = [
 const formDatas = ref({
     sample: "",
     device: "",
-    file: "",
+    file: ["", ""],
     hmd: "",
     note: ""
 })
+const loading = ref(false)
 
 // const onFileUploaded = (event) => {
 //     formDatas.value.file = event.target.files[0]
@@ -41,11 +44,16 @@ const upload = async() => {
     const input =
         formDatas.value.sample
         && formDatas.value.device
-        && formDatas.value.file
+        && formDatas.value.file[0]
         && formDatas.value.hmd
     if (input) {
-        addData(formDatas.value)
+        loading.value = true
+        addData(formDatas.value, completed)
     }
+}
+
+const completed = (params) => {
+    router.push({ path: '/upload/complete', query: params })
 }
 </script>
 
@@ -89,7 +97,7 @@ const upload = async() => {
                     <v-col>
                         <v-text-field
                             v-model="formDatas.hmd"
-                            label="Oculas Quest2, HTC VIVE Pro etc..."
+                            label="Oculus Quest2, HTC VIVE Pro etc..."
                             :rules="[v => !!v || '必須項目です']"
                             required
                         ></v-text-field>
@@ -102,10 +110,16 @@ const upload = async() => {
                     </v-col>
                     <v-col>
                         <v-file-input
-                            v-model="formDatas.file"
+                            v-model="formDatas.file[0]"
                             accept=".csv"
-                            label="csvファイル"
+                            label="Proposed.csv"
                             :rules="[v => !!v || '必須項目です']"
+                            required
+                        ></v-file-input>
+                        <v-file-input
+                            v-model="formDatas.file[1]"
+                            accept=".csv"
+                            label="Standard.csv"
                             required
                         ></v-file-input>
                     </v-col>
@@ -128,6 +142,7 @@ const upload = async() => {
                         @click="upload"
                         elevation="2"
                         color="primary"
+                        :loading="loading"
                     >アップロード</v-btn>
                 </v-row>
         </v-form>
