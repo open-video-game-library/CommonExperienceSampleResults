@@ -13,3 +13,9 @@ It is available to upload and browse the questionnaire results of previous resea
 アンケート結果を共有することで、触覚ディスプレイの違いによる体験評価の比較が可能になります。
 
 By sharing the questionnaire results, it is possible to compare the experience evaluation of different haptic displays.
+
+アンケートは共通体験サンプルに標準で搭載されています。
+
+The questionnaire are standard equipped in the CES.
+
+<img width="857" alt="download" src="https://user-images.githubusercontent.com/52689532/223012824-b51a1035-efdb-48c4-8d27-c498eefc4b55.png">
