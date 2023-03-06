@@ -2,7 +2,7 @@
 
 Questionnaire results of Common Experience Sample
 
-Access to https://open-video-game-library.github.io/CommonExperienceSample_results/
+Access to https://open-video-game-library.github.io/CommonExperienceSampleResults/
 
 <img width="1260" alt="Experimantal results of Common Experience Sample" src="https://user-images.githubusercontent.com/52689532/216533540-69085258-2064-412b-9c33-898a634e4bb2.png">
 
